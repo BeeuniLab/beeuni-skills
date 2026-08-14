@@ -1,0 +1,15 @@
+# Local Python caches and generated artifacts.
+__pycache__/
+*.pyc
+.DS_Store
+.vscode/
+.idea/
+*.tmp
+.opencode/
+.threejs-dev/
+cs2_textures/
+integrations/vision/.venv/
+.cache/spec-search/
+runtime/
+.screenshot/
+work/
