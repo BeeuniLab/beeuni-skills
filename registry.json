@@ -1,7 +1,7 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry.json",
-  "name": "valkor-ai/valkor-skills",
-  "homepage": "https://github.com/valkor-ai/valkor-skills",
+  "name": "valkor-ai/beeuni-skills",
+  "homepage": "https://github.com/valkor-ai/beeuni-skills",
   "items": [
     {
       "name": "account-research",
@@ -10,13 +10,13 @@
       "description": "Get a complete picture of any company or person before outreach. This skill always works with web search, and gets significantly better with enrichment and CRM data.",
       "files": [
         {
-          "path": ".valkor/opencode/skills/account-research/SKILL.md",
+          "path": ".beeuni/opencode/skills/account-research/SKILL.md",
           "type": "registry:file",
           "target": "@skills/account-research/SKILL.md"
         }
       ],
       "meta": {
-        "source": "valkor-ai/valkor-skills",
+        "source": "valkor-ai/beeuni-skills",
         "primitive": "skill"
       }
     },
@@ -24,16 +24,16 @@
       "name": "coding",
       "type": "registry:skill",
       "title": "coding",
-      "description": "Route code, repository, and data/SQL work to isolated Valkor sessions instead of burning your main context on it. Use when asked to implement a feature, fix a bug, make failing tests pass, work a ticket/issue, refactor, navigate or change a codebase, ship a PR, review a pull request, or run SQL/warehouse analysis against a dataset — and when the user wants two agents or parallel reviewers/investigators on the same work. Covers the explore-vs-session routing call, deciding where the code lives (this project's repo vs cloning an external GitHub repo) or where the data lives, finding the repo with gh, spawning sessions in parallel, dual PR reviews, and reporting results back. Triggers: 'implement', 'fix the bug', 'make the tests pass', 'work this ticket', 'refactor this', 'open a PR', 'review this PR', 'run two agents on it', 'query the warehouse', 'analyze this dataset'.",
+      "description": "Route code, repository, and data/SQL work to isolated Beeuni sessions instead of burning your main context on it. Use when asked to implement a feature, fix a bug, make failing tests pass, work a ticket/issue, refactor, navigate or change a codebase, ship a PR, review a pull request, or run SQL/warehouse analysis against a dataset — and when the user wants two agents or parallel reviewers/investigators on the same work. Covers the explore-vs-session routing call, deciding where the code lives (this project's repo vs cloning an external GitHub repo) or where the data lives, finding the repo with gh, spawning sessions in parallel, dual PR reviews, and reporting results back. Triggers: 'implement', 'fix the bug', 'make the tests pass', 'work this ticket', 'refactor this', 'open a PR', 'review this PR', 'run two agents on it', 'query the warehouse', 'analyze this dataset'.",
       "files": [
         {
-          "path": ".valkor/opencode/skills/coding/SKILL.md",
+          "path": ".beeuni/opencode/skills/coding/SKILL.md",
           "type": "registry:file",
           "target": "@skills/coding/SKILL.md"
         }
       ],
       "meta": {
-        "source": "valkor-ai/valkor-skills",
+        "source": "valkor-ai/beeuni-skills",
         "primitive": "skill"
       }
     },
@@ -44,13 +44,13 @@
       "description": "Deep research agent skill. Use when the user needs thorough, scientific, truth-seeking research on any topic -- investigating claims, finding primary sources, synthesizing evidence, producing cited reports. Triggers on: 'research this', 'investigate', 'deep dive', 'find sources', 'what does the evidence say', 'literature review', 'fact check', 'analyze the research on', any request requiring multi-source investigation with citations.",
       "files": [
         {
-          "path": ".valkor/opencode/skills/deep-research/SKILL.md",
+          "path": ".beeuni/opencode/skills/deep-research/SKILL.md",
           "type": "registry:file",
           "target": "@skills/deep-research/SKILL.md"
         }
       ],
       "meta": {
-        "source": "valkor-ai/valkor-skills",
+        "source": "valkor-ai/beeuni-skills",
         "primitive": "skill"
       }
     },
@@ -61,48 +61,48 @@
       "description": "Use for structured review, fact-checking, annotation, and correction of documents such as PDF, DOCX, PPTX, and XLSX files.",
       "files": [
         {
-          "path": ".valkor/opencode/skills/document-review/SKILL.md",
+          "path": ".beeuni/opencode/skills/document-review/SKILL.md",
           "type": "registry:file",
           "target": "@skills/document-review/SKILL.md"
         },
         {
-          "path": ".valkor/opencode/skills/document-review/scripts/annotate_pdf.py",
+          "path": ".beeuni/opencode/skills/document-review/scripts/annotate_pdf.py",
           "type": "registry:file",
           "target": "@skills/document-review/scripts/annotate_pdf.py"
         },
         {
-          "path": ".valkor/opencode/skills/document-review/scripts/annotate_pptx.py",
+          "path": ".beeuni/opencode/skills/document-review/scripts/annotate_pptx.py",
           "type": "registry:file",
           "target": "@skills/document-review/scripts/annotate_pptx.py"
         },
         {
-          "path": ".valkor/opencode/skills/document-review/scripts/annotate_xlsx.py",
+          "path": ".beeuni/opencode/skills/document-review/scripts/annotate_xlsx.py",
           "type": "registry:file",
           "target": "@skills/document-review/scripts/annotate_xlsx.py"
         },
         {
-          "path": ".valkor/opencode/skills/document-review/scripts/constants.py",
+          "path": ".beeuni/opencode/skills/document-review/scripts/constants.py",
           "type": "registry:file",
           "target": "@skills/document-review/scripts/constants.py"
         },
         {
-          "path": ".valkor/opencode/skills/document-review/scripts/manage_state.py",
+          "path": ".beeuni/opencode/skills/document-review/scripts/manage_state.py",
           "type": "registry:file",
           "target": "@skills/document-review/scripts/manage_state.py"
         },
         {
-          "path": ".valkor/opencode/skills/document-review/scripts/models.py",
+          "path": ".beeuni/opencode/skills/document-review/scripts/models.py",
           "type": "registry:file",
           "target": "@skills/document-review/scripts/models.py"
         },
         {
-          "path": ".valkor/opencode/skills/document-review/specializations/finance.md",
+          "path": ".beeuni/opencode/skills/document-review/specializations/finance.md",
           "type": "registry:file",
           "target": "@skills/document-review/specializations/finance.md"
         }
       ],
       "meta": {
-        "source": "valkor-ai/valkor-skills",
+        "source": "valkor-ai/beeuni-skills",
         "primitive": "skill"
       }
     },
@@ -113,18 +113,18 @@
       "description": "Free domain research and availability checking. No API keys or credentials required. Uses RDAP (1195+ TLDs) with whois CLI fallback for universal coverage. Checks if domains are available, searches keywords across TLDs, performs WHOIS/RDAP lookups, checks expiry dates, and finds nameservers. Use when the agent needs to: check if a domain is available, search for domains, find who owns a domain, check domain expiration, get nameservers, bulk check domains, or do any domain research. Triggers on: 'check domain', 'is domain available', 'search domains', 'domain availability', 'who owns this domain', 'whois', 'domain expiry', 'when does domain expire', 'nameservers for', 'domain research', 'find domains for', 'domain ideas', 'bulk domain check'.",
       "files": [
         {
-          "path": ".valkor/opencode/skills/domain-research/SKILL.md",
+          "path": ".beeuni/opencode/skills/domain-research/SKILL.md",
           "type": "registry:file",
           "target": "@skills/domain-research/SKILL.md"
         },
         {
-          "path": ".valkor/opencode/skills/domain-research/scripts/domain-lookup.py",
+          "path": ".beeuni/opencode/skills/domain-research/scripts/domain-lookup.py",
           "type": "registry:file",
           "target": "@skills/domain-research/scripts/domain-lookup.py"
         }
       ],
       "meta": {
-        "source": "valkor-ai/valkor-skills",
+        "source": "valkor-ai/beeuni-skills",
         "primitive": "skill"
       }
     },
@@ -135,13 +135,13 @@
       "description": "Research first, then draft. This skill never sends generic outreach - it always researches the prospect first to personalize the message. Works standalone with web search, super...",
       "files": [
         {
-          "path": ".valkor/opencode/skills/draft-outreach/SKILL.md",
+          "path": ".beeuni/opencode/skills/draft-outreach/SKILL.md",
           "type": "registry:file",
           "target": "@skills/draft-outreach/SKILL.md"
         }
       ],
       "meta": {
-        "source": "valkor-ai/valkor-skills",
+        "source": "valkor-ai/beeuni-skills",
         "primitive": "skill"
       }
     },
@@ -152,38 +152,38 @@
       "description": "Legal document drafting -- contracts, memos, briefs, complaints, demand letters, opinions, discovery, settlements, ToS, privacy policies. Full pipeline: document structure, per-section writing, Bluebook citation, case law lookup (CourtListener API), regulation lookup (eCFR API), DOCX output, and TDD-style verification (defined terms, cross-references, placeholders, boilerplate, citation format). Triggers on: 'draft a contract', 'write a legal memo', 'create an NDA', 'write a brief', 'legal document about', 'draft a complaint', 'terms of service', 'privacy policy', 'demand letter', 'settlement agreement', 'legal opinion', 'discovery requests', any request to produce a legal or law-related document.",
       "files": [
         {
-          "path": ".valkor/opencode/skills/legal-writer/SKILL.md",
+          "path": ".beeuni/opencode/skills/legal-writer/SKILL.md",
           "type": "registry:file",
           "target": "@skills/legal-writer/SKILL.md"
         },
         {
-          "path": ".valkor/opencode/skills/legal-writer/references/bluebook.md",
+          "path": ".beeuni/opencode/skills/legal-writer/references/bluebook.md",
           "type": "registry:file",
           "target": "@skills/legal-writer/references/bluebook.md"
         },
         {
-          "path": ".valkor/opencode/skills/legal-writer/references/document-types.md",
+          "path": ".beeuni/opencode/skills/legal-writer/references/document-types.md",
           "type": "registry:file",
           "target": "@skills/legal-writer/references/document-types.md"
         },
         {
-          "path": ".valkor/opencode/skills/legal-writer/scripts/courtlistener.py",
+          "path": ".beeuni/opencode/skills/legal-writer/scripts/courtlistener.py",
           "type": "registry:file",
           "target": "@skills/legal-writer/scripts/courtlistener.py"
         },
         {
-          "path": ".valkor/opencode/skills/legal-writer/scripts/ecfr_lookup.py",
+          "path": ".beeuni/opencode/skills/legal-writer/scripts/ecfr_lookup.py",
           "type": "registry:file",
           "target": "@skills/legal-writer/scripts/ecfr_lookup.py"
         },
         {
-          "path": ".valkor/opencode/skills/legal-writer/scripts/verify-legal.py",
+          "path": ".beeuni/opencode/skills/legal-writer/scripts/verify-legal.py",
           "type": "registry:file",
           "target": "@skills/legal-writer/scripts/verify-legal.py"
         }
       ],
       "meta": {
-        "source": "valkor-ai/valkor-skills",
+        "source": "valkor-ai/beeuni-skills",
         "primitive": "skill"
       }
     },
@@ -194,13 +194,13 @@
       "description": "Custom OpenCode tool: people_search",
       "files": [
         {
-          "path": ".valkor/opencode/tools/people_search.ts",
+          "path": ".beeuni/opencode/tools/people_search.ts",
           "type": "registry:file",
           "target": "@tools/people_search.ts"
         }
       ],
       "meta": {
-        "source": "valkor-ai/valkor-skills",
+        "source": "valkor-ai/beeuni-skills",
         "primitive": "tool"
       }
     },
@@ -211,13 +211,13 @@
       "description": "Find people and companies — track down a specific person, assemble a shortlist who match a profile (title + industry + geography + skill), or look up a company/account. Use to locate a named individual, build a sourcing/recruiting/outreach list, resolve a company's org chart or firmographics, or answer 'who is the X at Y' / 'find people who Z' / 'look up this company'. Backed by the people_search tool (LinkedIn profile search → structured profiles) for the default web path, and by a connected people-data connector (Apollo, People Data Labs, Clearbit, Clay, RocketReach, Hunter, Lusha, ZoomInfo) for verified, richer records and company-level data when one is available.",
       "files": [
         {
-          "path": ".valkor/opencode/skills/people-search/SKILL.md",
+          "path": ".beeuni/opencode/skills/people-search/SKILL.md",
           "type": "registry:file",
           "target": "@skills/people-search/SKILL.md"
         }
       ],
       "meta": {
-        "source": "valkor-ai/valkor-skills",
+        "source": "valkor-ai/beeuni-skills",
         "primitive": "skill"
       }
     },
@@ -228,23 +228,23 @@
       "description": "Find and read information on the open web — fan-out web/news/finance search plus full-page fetching and source extraction. Use to answer current questions, gather and cite sources, verify a claim, or pull text from specific URLs. Triggers: 'search the web', 'look this up', 'find sources on', 'what's the latest on', 'fetch this page', 'is it true that…', 'compare X vs Y'.",
       "files": [
         {
-          "path": ".valkor/opencode/skills/search/SKILL.md",
+          "path": ".beeuni/opencode/skills/search/SKILL.md",
           "type": "registry:file",
           "target": "@skills/search/SKILL.md"
         },
         {
-          "path": ".valkor/opencode/skills/search/reference/recipes.md",
+          "path": ".beeuni/opencode/skills/search/reference/recipes.md",
           "type": "registry:file",
           "target": "@skills/search/reference/recipes.md"
         },
         {
-          "path": ".valkor/opencode/skills/search/reference/scaling.md",
+          "path": ".beeuni/opencode/skills/search/reference/scaling.md",
           "type": "registry:file",
           "target": "@skills/search/reference/scaling.md"
         }
       ],
       "meta": {
-        "source": "valkor-ai/valkor-skills",
+        "source": "valkor-ai/beeuni-skills",
         "primitive": "skill"
       }
     },
@@ -255,1203 +255,1203 @@
       "description": "Turn an object or character reference image into a quality-gated, animation-ready procedural Three.js model built in code. Use for image-to-3D reconstruction, detail-accurate object rebuilds, stylized/likeness-maximized human characters, sculpt specs, and staged code generation.",
       "files": [
         {
-          "path": ".valkor/opencode/skills/threejs-dev/.gitignore",
+          "path": ".beeuni/opencode/skills/threejs-dev/.gitignore",
           "type": "registry:file",
           "target": "@skills/threejs-dev/.gitignore"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/SKILL.md",
+          "path": ".beeuni/opencode/skills/threejs-dev/SKILL.md",
           "type": "registry:file",
           "target": "@skills/threejs-dev/SKILL.md"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/docs/ARCHITECTURE.md",
+          "path": ".beeuni/opencode/skills/threejs-dev/docs/ARCHITECTURE.md",
           "type": "registry:file",
           "target": "@skills/threejs-dev/docs/ARCHITECTURE.md"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/docs/RESEARCH_TRELLIS2_TO_THREEJS_DEV.md",
+          "path": ".beeuni/opencode/skills/threejs-dev/docs/RESEARCH_TRELLIS2_TO_THREEJS_DEV.md",
           "type": "registry:file",
           "target": "@skills/threejs-dev/docs/RESEARCH_TRELLIS2_TO_THREEJS_DEV.md"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/docs/TOKEN_COST.md",
+          "path": ".beeuni/opencode/skills/threejs-dev/docs/TOKEN_COST.md",
           "type": "registry:file",
           "target": "@skills/threejs-dev/docs/TOKEN_COST.md"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/docs/UPGRADE_PLAN.md",
+          "path": ".beeuni/opencode/skills/threejs-dev/docs/UPGRADE_PLAN.md",
           "type": "registry:file",
           "target": "@skills/threejs-dev/docs/UPGRADE_PLAN.md"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/docs/cs2-anatomy/gloves.md",
+          "path": ".beeuni/opencode/skills/threejs-dev/docs/cs2-anatomy/gloves.md",
           "type": "registry:file",
           "target": "@skills/threejs-dev/docs/cs2-anatomy/gloves.md"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/docs/cs2-anatomy/heavy.md",
+          "path": ".beeuni/opencode/skills/threejs-dev/docs/cs2-anatomy/heavy.md",
           "type": "registry:file",
           "target": "@skills/threejs-dev/docs/cs2-anatomy/heavy.md"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/docs/cs2-anatomy/knives.md",
+          "path": ".beeuni/opencode/skills/threejs-dev/docs/cs2-anatomy/knives.md",
           "type": "registry:file",
           "target": "@skills/threejs-dev/docs/cs2-anatomy/knives.md"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/docs/cs2-anatomy/pistols.md",
+          "path": ".beeuni/opencode/skills/threejs-dev/docs/cs2-anatomy/pistols.md",
           "type": "registry:file",
           "target": "@skills/threejs-dev/docs/cs2-anatomy/pistols.md"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/docs/cs2-anatomy/rifles.md",
+          "path": ".beeuni/opencode/skills/threejs-dev/docs/cs2-anatomy/rifles.md",
           "type": "registry:file",
           "target": "@skills/threejs-dev/docs/cs2-anatomy/rifles.md"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/docs/cs2-anatomy/smgs.md",
+          "path": ".beeuni/opencode/skills/threejs-dev/docs/cs2-anatomy/smgs.md",
           "type": "registry:file",
           "target": "@skills/threejs-dev/docs/cs2-anatomy/smgs.md"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/docs/cs2-anatomy/snipers.md",
+          "path": ".beeuni/opencode/skills/threejs-dev/docs/cs2-anatomy/snipers.md",
           "type": "registry:file",
           "target": "@skills/threejs-dev/docs/cs2-anatomy/snipers.md"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/docs/cs2/3D_Technical_Mapping.json",
+          "path": ".beeuni/opencode/skills/threejs-dev/docs/cs2/3D_Technical_Mapping.json",
           "type": "registry:file",
           "target": "@skills/threejs-dev/docs/cs2/3D_Technical_Mapping.json"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/docs/cs2/3D_Technical_Reference.md",
+          "path": ".beeuni/opencode/skills/threejs-dev/docs/cs2/3D_Technical_Reference.md",
           "type": "registry:file",
           "target": "@skills/threejs-dev/docs/cs2/3D_Technical_Reference.md"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/docs/cs2/3D_Vocabulary_CS2.json",
+          "path": ".beeuni/opencode/skills/threejs-dev/docs/cs2/3D_Vocabulary_CS2.json",
           "type": "registry:file",
           "target": "@skills/threejs-dev/docs/cs2/3D_Vocabulary_CS2.json"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/docs/cs2/3D_Vocabulary_CS2_Dictionary.md",
+          "path": ".beeuni/opencode/skills/threejs-dev/docs/cs2/3D_Vocabulary_CS2_Dictionary.md",
           "type": "registry:file",
           "target": "@skills/threejs-dev/docs/cs2/3D_Vocabulary_CS2_Dictionary.md"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/docs/cs2/distill.md",
+          "path": ".beeuni/opencode/skills/threejs-dev/docs/cs2/distill.md",
           "type": "registry:file",
           "target": "@skills/threejs-dev/docs/cs2/distill.md"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/docs/cs2/review-gates.md",
+          "path": ".beeuni/opencode/skills/threejs-dev/docs/cs2/review-gates.md",
           "type": "registry:file",
           "target": "@skills/threejs-dev/docs/cs2/review-gates.md"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/docs/integrations/reference_fidelity_tooling.md",
+          "path": ".beeuni/opencode/skills/threejs-dev/docs/integrations/reference_fidelity_tooling.md",
           "type": "registry:file",
           "target": "@skills/threejs-dev/docs/integrations/reference_fidelity_tooling.md"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/docs/issue-triage.md",
+          "path": ".beeuni/opencode/skills/threejs-dev/docs/issue-triage.md",
           "type": "registry:file",
           "target": "@skills/threejs-dev/docs/issue-triage.md"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/docs/materials/IMAGE_MATERIAL_ANALYSIS.md",
+          "path": ".beeuni/opencode/skills/threejs-dev/docs/materials/IMAGE_MATERIAL_ANALYSIS.md",
           "type": "registry:file",
           "target": "@skills/threejs-dev/docs/materials/IMAGE_MATERIAL_ANALYSIS.md"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/docs/materials/README.md",
+          "path": ".beeuni/opencode/skills/threejs-dev/docs/materials/README.md",
           "type": "registry:file",
           "target": "@skills/threejs-dev/docs/materials/README.md"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/docs/materials/THREEJS_MATERIAL_REFERENCE.md",
+          "path": ".beeuni/opencode/skills/threejs-dev/docs/materials/THREEJS_MATERIAL_REFERENCE.md",
           "type": "registry:file",
           "target": "@skills/threejs-dev/docs/materials/THREEJS_MATERIAL_REFERENCE.md"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/docs/materials/material-reference.json",
+          "path": ".beeuni/opencode/skills/threejs-dev/docs/materials/material-reference.json",
           "type": "registry:file",
           "target": "@skills/threejs-dev/docs/materials/material-reference.json"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/docs/specs/render-profile.v2.example.json",
+          "path": ".beeuni/opencode/skills/threejs-dev/docs/specs/render-profile.v2.example.json",
           "type": "registry:file",
           "target": "@skills/threejs-dev/docs/specs/render-profile.v2.example.json"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/docs/specs/render-profile.v2.schema.json",
+          "path": ".beeuni/opencode/skills/threejs-dev/docs/specs/render-profile.v2.schema.json",
           "type": "registry:file",
           "target": "@skills/threejs-dev/docs/specs/render-profile.v2.schema.json"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/docs/specs/vocabulary/README.md",
+          "path": ".beeuni/opencode/skills/threejs-dev/docs/specs/vocabulary/README.md",
           "type": "registry:file",
           "target": "@skills/threejs-dev/docs/specs/vocabulary/README.md"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/docs/specs/vocabulary/core_3d.jsonl",
+          "path": ".beeuni/opencode/skills/threejs-dev/docs/specs/vocabulary/core_3d.jsonl",
           "type": "registry:file",
           "target": "@skills/threejs-dev/docs/specs/vocabulary/core_3d.jsonl"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/docs/specs/vocabulary/core_3d_reconstruction.jsonl",
+          "path": ".beeuni/opencode/skills/threejs-dev/docs/specs/vocabulary/core_3d_reconstruction.jsonl",
           "type": "registry:file",
           "target": "@skills/threejs-dev/docs/specs/vocabulary/core_3d_reconstruction.jsonl"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/docs/specs/vocabulary/cs2.jsonl",
+          "path": ".beeuni/opencode/skills/threejs-dev/docs/specs/vocabulary/cs2.jsonl",
           "type": "registry:file",
           "target": "@skills/threejs-dev/docs/specs/vocabulary/cs2.jsonl"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/docs/specs/vocabulary/cs2_reconstruction.jsonl",
+          "path": ".beeuni/opencode/skills/threejs-dev/docs/specs/vocabulary/cs2_reconstruction.jsonl",
           "type": "registry:file",
           "target": "@skills/threejs-dev/docs/specs/vocabulary/cs2_reconstruction.jsonl"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/_shared/artifact_cache.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/_shared/artifact_cache.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/_shared/artifact_cache.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/_shared/color_metrics.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/_shared/color_metrics.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/_shared/color_metrics.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/_shared/feature_acceptance_policy.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/_shared/feature_acceptance_policy.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/_shared/feature_acceptance_policy.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/_shared/image_hash.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/_shared/image_hash.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/_shared/image_hash.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/_shared/jpeg.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/_shared/jpeg.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/_shared/jpeg.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/_shared/pipeline_routing.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/_shared/pipeline_routing.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/_shared/pipeline_routing.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/_shared/sdf_primitives.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/_shared/sdf_primitives.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/_shared/sdf_primitives.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/_shared/spec_search.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/_shared/spec_search.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/_shared/spec_search.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/_shared/spec_search_profiles.json",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/_shared/spec_search_profiles.json",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/_shared/spec_search_profiles.json"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/_shared/status_banner.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/_shared/status_banner.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/_shared/status_banner.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/_shared/subdivision.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/_shared/subdivision.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/_shared/subdivision.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/_shared/workflow_state.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/_shared/workflow_state.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/_shared/workflow_state.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/materials/__init__.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/materials/__init__.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/materials/__init__.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/materials/compatibility.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/materials/compatibility.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/materials/compatibility.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/materials/reference.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/materials/reference.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/materials/reference.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/next.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/next.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/next.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/report.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/report.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/report.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/requirements.txt",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/requirements.txt",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/requirements.txt"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/stage1_intake/analyze_texture.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/stage1_intake/analyze_texture.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/stage1_intake/analyze_texture.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/stage1_intake/bind_detail_properties.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/stage1_intake/bind_detail_properties.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/stage1_intake/bind_detail_properties.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/stage1_intake/build_detail_inventory.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/stage1_intake/build_detail_inventory.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/stage1_intake/build_detail_inventory.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/stage1_intake/camera_fitting_math.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/stage1_intake/camera_fitting_math.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/stage1_intake/camera_fitting_math.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/stage1_intake/camera_fitting_solver.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/stage1_intake/camera_fitting_solver.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/stage1_intake/camera_fitting_solver.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/stage1_intake/camera_fitting_types.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/stage1_intake/camera_fitting_types.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/stage1_intake/camera_fitting_types.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/stage1_intake/camera_image_helpers.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/stage1_intake/camera_image_helpers.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/stage1_intake/camera_image_helpers.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/stage1_intake/check_intake_correctness.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/stage1_intake/check_intake_correctness.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/stage1_intake/check_intake_correctness.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/stage1_intake/check_reference_admission.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/stage1_intake/check_reference_admission.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/stage1_intake/check_reference_admission.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/stage1_intake/cs2_foundation.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/stage1_intake/cs2_foundation.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/stage1_intake/cs2_foundation.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/stage1_intake/cs2_manifest.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/stage1_intake/cs2_manifest.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/stage1_intake/cs2_manifest.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/stage1_intake/cs2_review_contract.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/stage1_intake/cs2_review_contract.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/stage1_intake/cs2_review_contract.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/stage1_intake/delight_albedo.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/stage1_intake/delight_albedo.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/stage1_intake/delight_albedo.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/stage1_intake/detect_cs2.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/stage1_intake/detect_cs2.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/stage1_intake/detect_cs2.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/stage1_intake/detect_reference_effects.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/stage1_intake/detect_reference_effects.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/stage1_intake/detect_reference_effects.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/stage1_intake/extract_cs2_textures.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/stage1_intake/extract_cs2_textures.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/stage1_intake/extract_cs2_textures.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/stage1_intake/extract_gradient_stops.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/stage1_intake/extract_gradient_stops.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/stage1_intake/extract_gradient_stops.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/stage1_intake/extract_landmarks.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/stage1_intake/extract_landmarks.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/stage1_intake/extract_landmarks.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/stage1_intake/extract_part_color_recipe.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/stage1_intake/extract_part_color_recipe.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/stage1_intake/extract_part_color_recipe.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/stage1_intake/extract_pbr_evidence.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/stage1_intake/extract_pbr_evidence.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/stage1_intake/extract_pbr_evidence.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/stage1_intake/fetch_cs2_metadata.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/stage1_intake/fetch_cs2_metadata.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/stage1_intake/fetch_cs2_metadata.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/stage1_intake/locate_cs2_vpk.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/stage1_intake/locate_cs2_vpk.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/stage1_intake/locate_cs2_vpk.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/stage1_intake/material_region_analysis.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/stage1_intake/material_region_analysis.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/stage1_intake/material_region_analysis.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/stage1_intake/probe_glb.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/stage1_intake/probe_glb.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/stage1_intake/probe_glb.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/stage1_intake/probe_image.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/stage1_intake/probe_image.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/stage1_intake/probe_image.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/stage1_intake/run_vision_adapter.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/stage1_intake/run_vision_adapter.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/stage1_intake/run_vision_adapter.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/stage1_intake/search_specs.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/stage1_intake/search_specs.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/stage1_intake/search_specs.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/stage1_intake/semantic_decomposition.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/stage1_intake/semantic_decomposition.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/stage1_intake/semantic_decomposition.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/stage1_intake/solve_camera_pose.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/stage1_intake/solve_camera_pose.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/stage1_intake/solve_camera_pose.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/stage2_spec/apply_material_analysis.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/stage2_spec/apply_material_analysis.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/stage2_spec/apply_material_analysis.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/stage2_spec/cs2_adapters.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/stage2_spec/cs2_adapters.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/stage2_spec/cs2_adapters.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/stage2_spec/derive_geometry.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/stage2_spec/derive_geometry.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/stage2_spec/derive_geometry.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/stage2_spec/humanoid_proportions.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/stage2_spec/humanoid_proportions.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/stage2_spec/humanoid_proportions.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/stage2_spec/new_pre_spec_assessment.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/stage2_spec/new_pre_spec_assessment.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/stage2_spec/new_pre_spec_assessment.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/stage2_spec/new_sculpt_spec.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/stage2_spec/new_sculpt_spec.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/stage2_spec/new_sculpt_spec.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/stage2_spec/validate_sculpt_spec.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/stage2_spec/validate_sculpt_spec.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/stage2_spec/validate_sculpt_spec.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/stage3_build/bake_projected_texture.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/stage3_build/bake_projected_texture.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/stage3_build/bake_projected_texture.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/stage3_build/decimate.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/stage3_build/decimate.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/stage3_build/decimate.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/stage3_build/generate_threejs_factory.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/stage3_build/generate_threejs_factory.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/stage3_build/generate_threejs_factory.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/stage3_build/module_cache.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/stage3_build/module_cache.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/stage3_build/module_cache.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/stage3_build/morph_targets.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/stage3_build/morph_targets.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/stage3_build/morph_targets.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/stage3_build/orchestrate_passes.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/stage3_build/orchestrate_passes.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/stage3_build/orchestrate_passes.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/stage3_build/uv_unwrap.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/stage3_build/uv_unwrap.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/stage3_build/uv_unwrap.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/stage3_build/visual_hull.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/stage3_build/visual_hull.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/stage3_build/visual_hull.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/stage4_review/_fit_divine_eye.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/stage4_review/_fit_divine_eye.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/stage4_review/_fit_divine_eye.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/stage4_review/append_review.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/stage4_review/append_review.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/stage4_review/append_review.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/stage4_review/attachment_anchor.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/stage4_review/attachment_anchor.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/stage4_review/attachment_anchor.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/stage4_review/calibrate_eye.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/stage4_review/calibrate_eye.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/stage4_review/calibrate_eye.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/stage4_review/check_part_coverage.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/stage4_review/check_part_coverage.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/stage4_review/check_part_coverage.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/stage4_review/compare_region_passes.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/stage4_review/compare_region_passes.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/stage4_review/compare_region_passes.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/stage4_review/correction_loop.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/stage4_review/correction_loop.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/stage4_review/correction_loop.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/stage4_review/cs2_review.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/stage4_review/cs2_review.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/stage4_review/cs2_review.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/stage4_review/diagnose_render.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/stage4_review/diagnose_render.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/stage4_review/diagnose_render.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/stage4_review/diagnose_render_multi_angle.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/stage4_review/diagnose_render_multi_angle.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/stage4_review/diagnose_render_multi_angle.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/stage4_review/divine_eye.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/stage4_review/divine_eye.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/stage4_review/divine_eye.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/stage4_review/fit_params.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/stage4_review/fit_params.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/stage4_review/fit_params.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/stage4_review/geometry_integrity.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/stage4_review/geometry_integrity.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/stage4_review/geometry_integrity.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/stage4_review/joint_loops.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/stage4_review/joint_loops.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/stage4_review/joint_loops.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/stage4_review/make_comparison_sheet.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/stage4_review/make_comparison_sheet.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/stage4_review/make_comparison_sheet.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/stage4_review/material_comparator.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/stage4_review/material_comparator.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/stage4_review/material_comparator.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/stage4_review/material_feedback.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/stage4_review/material_feedback.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/stage4_review/material_feedback.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/stage4_review/material_gate.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/stage4_review/material_gate.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/stage4_review/material_gate.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/stage4_review/material_views.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/stage4_review/material_views.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/stage4_review/material_views.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/stage4_review/mesh_reference_compare.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/stage4_review/mesh_reference_compare.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/stage4_review/mesh_reference_compare.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/stage4_review/multi_pass.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/stage4_review/multi_pass.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/stage4_review/multi_pass.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/stage4_review/objectness.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/stage4_review/objectness.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/stage4_review/objectness.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/stage4_review/pairwise_penetration.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/stage4_review/pairwise_penetration.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/stage4_review/pairwise_penetration.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/stage4_review/per_feature.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/stage4_review/per_feature.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/stage4_review/per_feature.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/stage4_review/render_bridge.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/stage4_review/render_bridge.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/stage4_review/render_bridge.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/stage4_review/self_intersection.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/stage4_review/self_intersection.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/stage4_review/self_intersection.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/stage4_review/turntable_gate.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/stage4_review/turntable_gate.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/stage4_review/turntable_gate.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/stage4_review/validate_render_profile.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/stage4_review/validate_render_profile.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/stage4_review/validate_render_profile.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/stage4_review/vlm_gate.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/stage4_review/vlm_gate.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/stage4_review/vlm_gate.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/stage5_rig/NOTES.md",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/stage5_rig/NOTES.md",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/stage5_rig/NOTES.md"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/stage5_rig/__init__.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/stage5_rig/__init__.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/stage5_rig/__init__.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/stage5_rig/emit_rig.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/stage5_rig/emit_rig.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/stage5_rig/emit_rig.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/stage5_rig/geodesic_skinning.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/stage5_rig/geodesic_skinning.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/stage5_rig/geodesic_skinning.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/stage5_rig/rig_spec.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/stage5_rig/rig_spec.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/stage5_rig/rig_spec.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/stage5_rig/validate_rig_payload.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/stage5_rig/validate_rig_payload.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/stage5_rig/validate_rig_payload.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/state.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/state.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/state.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/tests/fixtures/implicit_character_torso_limb.json",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/tests/fixtures/implicit_character_torso_limb.json",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/tests/fixtures/implicit_character_torso_limb.json"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/tests/fixtures/knife_review_scene.json",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/tests/fixtures/knife_review_scene.json",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/tests/fixtures/knife_review_scene.json"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/tests/fixtures/subdivision_cage.json",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/tests/fixtures/subdivision_cage.json",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/tests/fixtures/subdivision_cage.json"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/tests/fixtures/visual_hull_two_views.json",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/tests/fixtures/visual_hull_two_views.json",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/tests/fixtures/visual_hull_two_views.json"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/tests/showcase_test_support.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/tests/showcase_test_support.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/tests/showcase_test_support.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/tests/test_analyze_texture.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/tests/test_analyze_texture.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/tests/test_analyze_texture.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/tests/test_attachment_anchor.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/tests/test_attachment_anchor.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/tests/test_attachment_anchor.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/tests/test_calibrate_eye.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/tests/test_calibrate_eye.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/tests/test_calibrate_eye.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/tests/test_camera_fitting.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/tests/test_camera_fitting.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/tests/test_camera_fitting.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/tests/test_camera_fitting_cli.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/tests/test_camera_fitting_cli.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/tests/test_camera_fitting_cli.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/tests/test_camera_fitting_safety.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/tests/test_camera_fitting_safety.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/tests/test_camera_fitting_safety.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/tests/test_character_rig_derivation.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/tests/test_character_rig_derivation.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/tests/test_character_rig_derivation.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/tests/test_color_metrics.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/tests/test_color_metrics.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/tests/test_color_metrics.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/tests/test_color_recipe.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/tests/test_color_recipe.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/tests/test_color_recipe.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/tests/test_correction_loop.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/tests/test_correction_loop.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/tests/test_correction_loop.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/tests/test_cs2_foundation.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/tests/test_cs2_foundation.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/tests/test_cs2_foundation.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/tests/test_cs2_manifest.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/tests/test_cs2_manifest.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/tests/test_cs2_manifest.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/tests/test_cs2_review.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/tests/test_cs2_review.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/tests/test_cs2_review.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/tests/test_decimation_wiring.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/tests/test_decimation_wiring.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/tests/test_decimation_wiring.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/tests/test_divine_eye.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/tests/test_divine_eye.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/tests/test_divine_eye.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/tests/test_fit_params.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/tests/test_fit_params.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/tests/test_fit_params.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/tests/test_geodesic_skinning.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/tests/test_geodesic_skinning.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/tests/test_geodesic_skinning.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/tests/test_geometry_derivation.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/tests/test_geometry_derivation.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/tests/test_geometry_derivation.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/tests/test_glb_reference.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/tests/test_glb_reference.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/tests/test_glb_reference.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/tests/test_gradient_stops.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/tests/test_gradient_stops.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/tests/test_gradient_stops.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/tests/test_hierarchy_scale.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/tests/test_hierarchy_scale.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/tests/test_hierarchy_scale.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/tests/test_hue_zone_parity.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/tests/test_hue_zone_parity.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/tests/test_hue_zone_parity.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/tests/test_humanoid_proportions.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/tests/test_humanoid_proportions.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/tests/test_humanoid_proportions.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/tests/test_humanoid_silhouette_profile.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/tests/test_humanoid_silhouette_profile.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/tests/test_humanoid_silhouette_profile.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/tests/test_intake_binding.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/tests/test_intake_binding.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/tests/test_intake_binding.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/tests/test_issue_triage.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/tests/test_issue_triage.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/tests/test_issue_triage.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/tests/test_joint_admission_gate.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/tests/test_joint_admission_gate.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/tests/test_joint_admission_gate.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/tests/test_joint_loops.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/tests/test_joint_loops.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/tests/test_joint_loops.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/tests/test_jpeg.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/tests/test_jpeg.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/tests/test_jpeg.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/tests/test_material_pipeline.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/tests/test_material_pipeline.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/tests/test_material_pipeline.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/tests/test_material_reference.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/tests/test_material_reference.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/tests/test_material_reference.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/tests/test_module_cache.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/tests/test_module_cache.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/tests/test_module_cache.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/tests/test_multi_angle.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/tests/test_multi_angle.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/tests/test_multi_angle.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/tests/test_objectness.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/tests/test_objectness.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/tests/test_objectness.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/tests/test_optional_vision_tooling.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/tests/test_optional_vision_tooling.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/tests/test_optional_vision_tooling.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/tests/test_part_collision_morphs_lod.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/tests/test_part_collision_morphs_lod.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/tests/test_part_collision_morphs_lod.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/tests/test_per_feature.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/tests/test_per_feature.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/tests/test_per_feature.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/tests/test_pipeline.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/tests/test_pipeline.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/tests/test_pipeline.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/tests/test_pipeline_routing.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/tests/test_pipeline_routing.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/tests/test_pipeline_routing.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/tests/test_primitive_watertightness.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/tests/test_primitive_watertightness.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/tests/test_primitive_watertightness.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/tests/test_recessed_and_open_shell_topology.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/tests/test_recessed_and_open_shell_topology.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/tests/test_recessed_and_open_shell_topology.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/tests/test_reference_admission.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/tests/test_reference_admission.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/tests/test_reference_admission.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/tests/test_reference_effects.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/tests/test_reference_effects.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/tests/test_reference_effects.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/tests/test_render_bridge.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/tests/test_render_bridge.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/tests/test_render_bridge.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/tests/test_render_profile.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/tests/test_render_profile.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/tests/test_render_profile.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/tests/test_repetition_system_scale.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/tests/test_repetition_system_scale.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/tests/test_repetition_system_scale.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/tests/test_rig_hierarchy_emission.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/tests/test_rig_hierarchy_emission.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/tests/test_rig_hierarchy_emission.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/tests/test_rig_milestone0.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/tests/test_rig_milestone0.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/tests/test_rig_milestone0.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/tests/test_sdf_primitives.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/tests/test_sdf_primitives.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/tests/test_sdf_primitives.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/tests/test_search_specs.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/tests/test_search_specs.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/tests/test_search_specs.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/tests/test_self_intersection.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/tests/test_self_intersection.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/tests/test_self_intersection.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/tests/test_showcase_tsc_smoke.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/tests/test_showcase_tsc_smoke.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/tests/test_showcase_tsc_smoke.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/tests/test_specular_wash.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/tests/test_specular_wash.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/tests/test_specular_wash.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/tests/test_structure_gates.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/tests/test_structure_gates.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/tests/test_structure_gates.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/tests/test_subdivision.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/tests/test_subdivision.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/tests/test_subdivision.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/tests/test_tessellation_tiers.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/tests/test_tessellation_tiers.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/tests/test_tessellation_tiers.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/tests/test_tier1_diagnostics.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/tests/test_tier1_diagnostics.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/tests/test_tier1_diagnostics.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/tests/test_turntable_gate.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/tests/test_turntable_gate.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/tests/test_turntable_gate.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/tests/test_uv_unwrap.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/tests/test_uv_unwrap.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/tests/test_uv_unwrap.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/tests/test_validate_rig_payload.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/tests/test_validate_rig_payload.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/tests/test_validate_rig_payload.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/tests/test_visual_hull.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/tests/test_visual_hull.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/tests/test_visual_hull.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/tests/test_visual_hull_carve.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/tests/test_visual_hull_carve.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/tests/test_visual_hull_carve.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/tests/test_vlm_gate.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/tests/test_vlm_gate.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/tests/test_vlm_gate.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/tests/test_workflow_state.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/tests/test_workflow_state.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/tests/test_workflow_state.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/forge/tests/test_ws6_docs.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/forge/tests/test_ws6_docs.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/forge/tests/test_ws6_docs.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/grimoire/character/head_construction.md",
+          "path": ".beeuni/opencode/skills/threejs-dev/grimoire/character/head_construction.md",
           "type": "registry:file",
           "target": "@skills/threejs-dev/grimoire/character/head_construction.md"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/grimoire/character/likeness_maximization.md",
+          "path": ".beeuni/opencode/skills/threejs-dev/grimoire/character/likeness_maximization.md",
           "type": "registry:file",
           "target": "@skills/threejs-dev/grimoire/character/likeness_maximization.md"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/grimoire/character/reconstruction.md",
+          "path": ".beeuni/opencode/skills/threejs-dev/grimoire/character/reconstruction.md",
           "type": "registry:file",
           "target": "@skills/threejs-dev/grimoire/character/reconstruction.md"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/grimoire/character/structure_decomposition.md",
+          "path": ".beeuni/opencode/skills/threejs-dev/grimoire/character/structure_decomposition.md",
           "type": "registry:file",
           "target": "@skills/threejs-dev/grimoire/character/structure_decomposition.md"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/grimoire/character/stylized_hair_threejs.md",
+          "path": ".beeuni/opencode/skills/threejs-dev/grimoire/character/stylized_hair_threejs.md",
           "type": "registry:file",
           "target": "@skills/threejs-dev/grimoire/character/stylized_hair_threejs.md"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/grimoire/character/threejs_hair_parameter_contract.json",
+          "path": ".beeuni/opencode/skills/threejs-dev/grimoire/character/threejs_hair_parameter_contract.json",
           "type": "registry:file",
           "target": "@skills/threejs-dev/grimoire/character/threejs_hair_parameter_contract.json"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/grimoire/feedback/render_capture.md",
+          "path": ".beeuni/opencode/skills/threejs-dev/grimoire/feedback/render_capture.md",
           "type": "registry:file",
           "target": "@skills/threejs-dev/grimoire/feedback/render_capture.md"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/grimoire/feedback/shading_realism.md",
+          "path": ".beeuni/opencode/skills/threejs-dev/grimoire/feedback/shading_realism.md",
           "type": "registry:file",
           "target": "@skills/threejs-dev/grimoire/feedback/shading_realism.md"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/grimoire/glossary/3d_vocabulary.md",
+          "path": ".beeuni/opencode/skills/threejs-dev/grimoire/glossary/3d_vocabulary.md",
           "type": "registry:file",
           "target": "@skills/threejs-dev/grimoire/glossary/3d_vocabulary.md"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/grimoire/intake/cs2_intake_contract.md",
+          "path": ".beeuni/opencode/skills/threejs-dev/grimoire/intake/cs2_intake_contract.md",
           "type": "registry:file",
           "target": "@skills/threejs-dev/grimoire/intake/cs2_intake_contract.md"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/grimoire/intake/cs2_technical_analysis.md",
+          "path": ".beeuni/opencode/skills/threejs-dev/grimoire/intake/cs2_technical_analysis.md",
           "type": "registry:file",
           "target": "@skills/threejs-dev/grimoire/intake/cs2_technical_analysis.md"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/grimoire/intake/cs2_texture_acquisition.md",
+          "path": ".beeuni/opencode/skills/threejs-dev/grimoire/intake/cs2_texture_acquisition.md",
           "type": "registry:file",
           "target": "@skills/threejs-dev/grimoire/intake/cs2_texture_acquisition.md"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/grimoire/intake/detail_inventory.md",
+          "path": ".beeuni/opencode/skills/threejs-dev/grimoire/intake/detail_inventory.md",
           "type": "registry:file",
           "target": "@skills/threejs-dev/grimoire/intake/detail_inventory.md"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/grimoire/intake/image_analysis.md",
+          "path": ".beeuni/opencode/skills/threejs-dev/grimoire/intake/image_analysis.md",
           "type": "registry:file",
           "target": "@skills/threejs-dev/grimoire/intake/image_analysis.md"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/grimoire/intake/local_spec_search.md",
+          "path": ".beeuni/opencode/skills/threejs-dev/grimoire/intake/local_spec_search.md",
           "type": "registry:file",
           "target": "@skills/threejs-dev/grimoire/intake/local_spec_search.md"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/grimoire/intake/quality_contract.md",
+          "path": ".beeuni/opencode/skills/threejs-dev/grimoire/intake/quality_contract.md",
           "type": "registry:file",
           "target": "@skills/threejs-dev/grimoire/intake/quality_contract.md"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/grimoire/intake/surface_topology.md",
+          "path": ".beeuni/opencode/skills/threejs-dev/grimoire/intake/surface_topology.md",
           "type": "registry:file",
           "target": "@skills/threejs-dev/grimoire/intake/surface_topology.md"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/grimoire/intake/validation_rubric.md",
+          "path": ".beeuni/opencode/skills/threejs-dev/grimoire/intake/validation_rubric.md",
           "type": "registry:file",
           "target": "@skills/threejs-dev/grimoire/intake/validation_rubric.md"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/grimoire/readiness/action_rigging.md",
+          "path": ".beeuni/opencode/skills/threejs-dev/grimoire/readiness/action_rigging.md",
           "type": "registry:file",
           "target": "@skills/threejs-dev/grimoire/readiness/action_rigging.md"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/grimoire/readiness/joint_attachment.md",
+          "path": ".beeuni/opencode/skills/threejs-dev/grimoire/readiness/joint_attachment.md",
           "type": "registry:file",
           "target": "@skills/threejs-dev/grimoire/readiness/joint_attachment.md"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/grimoire/readiness/procedural_rigging_contract.md",
+          "path": ".beeuni/opencode/skills/threejs-dev/grimoire/readiness/procedural_rigging_contract.md",
           "type": "registry:file",
           "target": "@skills/threejs-dev/grimoire/readiness/procedural_rigging_contract.md"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/grimoire/readiness/standard_character_pipeline.md",
+          "path": ".beeuni/opencode/skills/threejs-dev/grimoire/readiness/standard_character_pipeline.md",
           "type": "registry:file",
           "target": "@skills/threejs-dev/grimoire/readiness/standard_character_pipeline.md"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/grimoire/review/divine_eye_microscope.md",
+          "path": ".beeuni/opencode/skills/threejs-dev/grimoire/review/divine_eye_microscope.md",
           "type": "registry:file",
           "target": "@skills/threejs-dev/grimoire/review/divine_eye_microscope.md"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/grimoire/review/gates_reference.md",
+          "path": ".beeuni/opencode/skills/threejs-dev/grimoire/review/gates_reference.md",
           "type": "registry:file",
           "target": "@skills/threejs-dev/grimoire/review/gates_reference.md"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/grimoire/review/self_correction.md",
+          "path": ".beeuni/opencode/skills/threejs-dev/grimoire/review/self_correction.md",
           "type": "registry:file",
           "target": "@skills/threejs-dev/grimoire/review/self_correction.md"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/grimoire/scripts.md",
+          "path": ".beeuni/opencode/skills/threejs-dev/grimoire/scripts.md",
           "type": "registry:file",
           "target": "@skills/threejs-dev/grimoire/scripts.md"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/integrations/mesh3d/generate_reference_mesh.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/integrations/mesh3d/generate_reference_mesh.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/integrations/mesh3d/generate_reference_mesh.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/integrations/vision/.python-version",
+          "path": ".beeuni/opencode/skills/threejs-dev/integrations/vision/.python-version",
           "type": "registry:file",
           "target": "@skills/threejs-dev/integrations/vision/.python-version"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/integrations/vision/README.md",
+          "path": ".beeuni/opencode/skills/threejs-dev/integrations/vision/README.md",
           "type": "registry:file",
           "target": "@skills/threejs-dev/integrations/vision/README.md"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/integrations/vision/pyproject.toml",
+          "path": ".beeuni/opencode/skills/threejs-dev/integrations/vision/pyproject.toml",
           "type": "registry:file",
           "target": "@skills/threejs-dev/integrations/vision/pyproject.toml"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/integrations/vision/reference_vision.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/integrations/vision/reference_vision.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/integrations/vision/reference_vision.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/integrations/vision/uv.lock",
+          "path": ".beeuni/opencode/skills/threejs-dev/integrations/vision/uv.lock",
           "type": "registry:file",
           "target": "@skills/threejs-dev/integrations/vision/uv.lock"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/scripts/capture_threejs_playwright.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/scripts/capture_threejs_playwright.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/scripts/capture_threejs_playwright.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/scripts/character_audit.sh",
+          "path": ".beeuni/opencode/skills/threejs-dev/scripts/character_audit.sh",
           "type": "registry:file",
           "target": "@skills/threejs-dev/scripts/character_audit.sh"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/scripts/issue_triage.py",
+          "path": ".beeuni/opencode/skills/threejs-dev/scripts/issue_triage.py",
           "type": "registry:file",
           "target": "@skills/threejs-dev/scripts/issue_triage.py"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/skills/cs2-knife.md",
+          "path": ".beeuni/opencode/skills/threejs-dev/skills/cs2-knife.md",
           "type": "registry:file",
           "target": "@skills/threejs-dev/skills/cs2-knife.md"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/skills/cs2-pistol.md",
+          "path": ".beeuni/opencode/skills/threejs-dev/skills/cs2-pistol.md",
           "type": "registry:file",
           "target": "@skills/threejs-dev/skills/cs2-pistol.md"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/skills/cs2_technical_analysis.md",
+          "path": ".beeuni/opencode/skills/threejs-dev/skills/cs2_technical_analysis.md",
           "type": "registry:file",
           "target": "@skills/threejs-dev/skills/cs2_technical_analysis.md"
         },
         {
-          "path": ".valkor/opencode/skills/threejs-dev/skills/generic-extract-skill.md",
+          "path": ".beeuni/opencode/skills/threejs-dev/skills/generic-extract-skill.md",
           "type": "registry:file",
           "target": "@skills/threejs-dev/skills/generic-extract-skill.md"
         }
       ],
       "meta": {
-        "source": "valkor-ai/valkor-skills",
+        "source": "valkor-ai/beeuni-skills",
         "primitive": "skill"
       }
     }

@@ -46,14 +46,14 @@ python3 "$SCRIPT" search "myproject" --tlds ".com,.io,.ai,.dev,.app,.co"
 ```bash
 # Full registration details (registrar, dates, status, nameservers, contacts)
 python3 "$SCRIPT" whois google.com
-python3 "$SCRIPT" whois valkorai.com
+python3 "$SCRIPT" whois beeuni.ai
 ```
 
 ### Expiry check
 
 ```bash
 # When does it expire? How many days left?
-python3 "$SCRIPT" expiry valkorai.com
+python3 "$SCRIPT" expiry beeuni.ai
 ```
 
 ### Nameservers

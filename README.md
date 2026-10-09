@@ -1,12 +1,12 @@
-# Valkor Skills
+# Beeuni Skills
 
-Public standalone Marketplace skills for Valkor.
+Public standalone Marketplace skills for Beeuni.
 
 ## Registry
 
-The generated `registry.json` is the entry point consumed by Valkor's
+The generated `registry.json` is the entry point consumed by Beeuni's
 Marketplace resolver. This repository intentionally contains the ten public
-standalone skills under `.valkor/opencode/skills/`, plus the `people_search`
+standalone skills under `.beeuni/opencode/skills/`, plus the `people_search`
 tool used by `people-search`.
 
 Installers should resolve this repository at a pinned commit or release tag.

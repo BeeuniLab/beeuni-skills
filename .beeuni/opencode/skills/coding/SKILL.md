@@ -1,6 +1,6 @@
 ---
 name: coding
-description: "Route code, repository, and data/SQL work to isolated Valkor sessions instead of burning your main context on it. Use when asked to implement a feature, fix a bug, make failing tests pass, work a ticket/issue, refactor, navigate or change a codebase, ship a PR, review a pull request, or run SQL/warehouse analysis against a dataset — and when the user wants two agents or parallel reviewers/investigators on the same work. Covers the explore-vs-session routing call, deciding where the code lives (this project's repo vs cloning an external GitHub repo) or where the data lives, finding the repo with gh, spawning sessions in parallel, dual PR reviews, and reporting results back. Triggers: 'implement', 'fix the bug', 'make the tests pass', 'work this ticket', 'refactor this', 'open a PR', 'review this PR', 'run two agents on it', 'query the warehouse', 'analyze this dataset'."
+description: "Route code, repository, and data/SQL work to isolated Beeuni sessions instead of burning your main context on it. Use when asked to implement a feature, fix a bug, make failing tests pass, work a ticket/issue, refactor, navigate or change a codebase, ship a PR, review a pull request, or run SQL/warehouse analysis against a dataset — and when the user wants two agents or parallel reviewers/investigators on the same work. Covers the explore-vs-session routing call, deciding where the code lives (this project's repo vs cloning an external GitHub repo) or where the data lives, finding the repo with gh, spawning sessions in parallel, dual PR reviews, and reporting results back. Triggers: 'implement', 'fix the bug', 'make the tests pass', 'work this ticket', 'refactor this', 'open a PR', 'review this PR', 'run two agents on it', 'query the warehouse', 'analyze this dataset'."
 ---
 
 # Coding
@@ -11,11 +11,11 @@ Reach for this skill for repo-shaped requests: implement, fix, refactor, make te
 
 ## Two ways to delegate, pick by weight
 
-Valkor gives you two delegation paths. Choosing the right one is the whole game.
+Beeuni gives you two delegation paths. Choosing the right one is the whole game.
 
 **The `explore` subagent — cheap, read-only recon.** When you need a fast answer about a codebase ("where is auth handled", "what calls this function", "does this repo use Vite or Webpack") and you do *not* need to change anything, invoke the read-only `explore` subagent via the `task` tool or an `@explore` mention. It searches and reports a conclusion instead of dumping files into your context. Use `scout` instead when the answer lives in an external dependency you'd need to pull source for.
 
-**A background session — the real worktree.** When the task is to *change* code — implement, fix, refactor, run a test suite, push a branch, open a PR — spawn a background session with the Valkor sessions flow (`session_start_background`, or `session_spawn` for parallel work). Each session is its own isolated VM sandbox with full tooling, so it can install, build, run, and commit without touching your environment. Read results back with `session_read`. This is the equivalent of handing the job to a dedicated coding agent.
+**A background session — the real worktree.** When the task is to *change* code — implement, fix, refactor, run a test suite, push a branch, open a PR — spawn a background session with the Beeuni sessions flow (`session_start_background`, or `session_spawn` for parallel work). Each session is its own isolated VM sandbox with full tooling, so it can install, build, run, and commit without touching your environment. Read results back with `session_read`. This is the equivalent of handing the job to a dedicated coding agent.
 
 **Keep the codebase out of your orchestrating context.** Don't drag a large or external repo into the session you're routing from — don't crawl its file tree, read its source, or fetch raw files from GitHub to "understand the architecture" first. That's what the delegate is for, and it explores far more efficiently than you can from the outside. Pass tickets, requirements, and constraints in the prompt; let the session discover the code. (Small, self-contained edits inside the current project are fine to do directly — the rule is about not importing an entire codebase into your head before delegating.)
 
@@ -24,7 +24,7 @@ Valkor gives you two delegation paths. Choosing the right one is the whole game.
 Before you spawn anything, settle the workspace question and state it plainly in the session prompt. Don't make the delegate guess from phrases like "in the repo." Pick one:
 
 - **This project's repo.** The session sandbox is already an ephemeral branch of this project's `/workspace`. For substantial in-project work, spawn a session scoped to the project (pass `project=<name>`) so it gets its own clean branch. Open the prompt with: *"Work in this project's workspace. No clone needed."*
-- **An external GitHub repo.** Spawn a session and have it clone the target itself with `gh repo clone <org>/<repo>` (or `git clone`). Open the prompt with: *"Clone https://github.com/org/repo into your workspace, then work there."* Make sure GitHub is connected first — if it isn't, mint a setup link to connect it before spawning (see the `valkor-system` credentials reference) rather than handing the session a repo it can't reach.
+- **An external GitHub repo.** Spawn a session and have it clone the target itself with `gh repo clone <org>/<repo>` (or `git clone`). Open the prompt with: *"Clone https://github.com/org/repo into your workspace, then work there."* Make sure GitHub is connected first — if it isn't, mint a setup link to connect it before spawning (see the `beeuni-system` credentials reference) rather than handing the session a repo it can't reach.
 - **No repo at all.** For coding-adjacent work that needs no repository files, say *"No repository needed"* and consider whether a session is even warranted.
 
 If a GitHub repo is clearly involved but you can't pin down the URL, resolve that *before* spawning — ask the user rather than letting a session burn startup time guessing whether to clone.
@@ -33,7 +33,7 @@ If a GitHub repo is clearly involved but you can't pin down the URL, resolve tha
 
 When the target is on GitHub and the user didn't paste a URL, find it with `gh` (don't reach for generic web-browsing tools — `gh` and `git` are the direct path):
 
-1. **Check project memory** — `view .valkor/memory` for the repo, project, or related names.
+1. **Check project memory** — `view .beeuni/memory` for the repo, project, or related names.
 2. **List the user's orgs**, then search inside the likely one: `gh api user/orgs --jq '.[].login'`, then `gh search repos "<query>" --owner=<org> --limit=5`.
 3. **Ask** if neither lands it.
 

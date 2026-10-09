@@ -5,7 +5,7 @@ description: "Find people and companies — track down a specific person, assemb
 
 # People Search
 
-Find people — a single named person, or a whole list that fits a profile — with the **`people_search`** tool. It runs a LinkedIn profile search and returns **structured profiles**: name, title, current company, location, and LinkedIn URL. It works out of the box (Valkor-proxied, billed to the account) or with your own `APIFY_TOKEN`.
+Find people — a single named person, or a whole list that fits a profile — with the **`people_search`** tool. It runs a LinkedIn profile search and returns **structured profiles**: name, title, current company, location, and LinkedIn URL. It works out of the box (Beeuni-proxied, billed to the account) or with your own `APIFY_TOKEN`.
 
 ## Using the tool
 
@@ -78,7 +78,7 @@ The web path above (`people_search`) works standalone and covers most asks. If t
 
 **Check what's connected:**
 ```sh
-valkor connectors ls                # or the `connectors` MCP tool
+beeuni connectors ls                # or the `connectors` MCP tool
 ```
 A connector qualifies if its job is people/company data. (CRMs like Salesforce/HubSpot can enrich *known* contacts too, but don't discover new ones — treat them as a supplement.) Nothing connected → stay on the web path above; it already answers most asks, and it's fine to offer to wire one up without blocking the request.
 
@@ -91,11 +91,11 @@ A connector qualifies if its job is people/company data. (CRMs like Salesforce/H
 
 **Filter — same discipline as the web path.** A curated index still returns loose matches. Phrase criteria as exclusions and judge each candidate against the fielded data returned; don't skip this step just because the connector felt more authoritative.
 
-**Wiring up a connector (when none exists).** Don't send the user to a dashboard — use the credentials flow (`valkor-system` → *Credentials & setup links*):
-- Pipedream-backed app (most prospecting tools): `valkor connectors add apollo --provider pipedream --app apollo --apply`, then `valkor connectors connect apollo` to mint a 1-click link.
-- API-key provider (e.g. a People Data Labs key): `valkor secrets request PDL_API_KEY --scope connector`.
+**Wiring up a connector (when none exists).** Don't send the user to a dashboard — use the credentials flow (`beeuni-system` → *Credentials & setup links*):
+- Pipedream-backed app (most prospecting tools): `beeuni connectors add apollo --provider pipedream --app apollo --apply`, then `beeuni connectors connect apollo` to mint a 1-click link.
+- API-key provider (e.g. a People Data Labs key): `beeuni secrets request PDL_API_KEY --scope connector`.
 
-Surface the URL, end your turn, and verify it landed (`valkor connectors ls` / `valkor secrets ls`) when the user returns.
+Surface the URL, end your turn, and verify it landed (`beeuni connectors ls` / `beeuni secrets ls`) when the user returns.
 
 **Output differences on the connector path:**
 - Source line names the connector, not "Web Search" — `**Found via:** Apollo`.

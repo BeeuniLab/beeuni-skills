@@ -1,10 +1,10 @@
 import { tool } from "@opencode-ai/plugin";
-import { getEnv, getValkorRouterBase } from "./lib/get-env";
+import { getEnv, getBeeuniRouterBase } from "./lib/get-env";
 
 // People search is powered by an Apify LinkedIn-profile-search actor. Like
-// web_search, it runs in two modes: through the Valkor router by default (Valkor
+// web_search, it runs in two modes: through the Beeuni router by default (Beeuni
 // injects the APIFY_TOKEN and bills the account — zero config for the user), or
-// against a raw APIFY_TOKEN when VALKOR_API_URL is unset (self-host / opt-in).
+// against a raw APIFY_TOKEN when BEEUNI_API_URL is unset (self-host / opt-in).
 //
 // The search is an Apify actor "run" (not an instant API). We use the
 // run-sync-get-dataset-items endpoint in "Short" mode (search pages only, no
@@ -82,15 +82,15 @@ export default tool({
       .describe("People to return (1-25). Default: 10"),
   },
   async execute(args, _context) {
-    const routerBase = getValkorRouterBase("apify");
-    const valkorToken = getEnv("VALKOR_TOKEN");
+    const routerBase = getBeeuniRouterBase("apify");
+    const beeuniToken = getEnv("BEEUNI_TOKEN");
     const apifyToken = getEnv("APIFY_TOKEN");
 
     let url: string;
     let bearer: string;
-    if (routerBase && valkorToken) {
+    if (routerBase && beeuniToken) {
       url = `${routerBase}${RUN_PATH}`;
-      bearer = valkorToken; // the router validates this and injects the real APIFY_TOKEN
+      bearer = beeuniToken; // the router validates this and injects the real APIFY_TOKEN
     } else if (apifyToken) {
       url = `${APIFY_DIRECT_BASE}${RUN_PATH}`;
       bearer = apifyToken;
@@ -99,7 +99,7 @@ export default tool({
         {
           success: false,
           error:
-            "people_search is unavailable: no Valkor router (VALKOR_API_URL / VALKOR_TOKEN) and no APIFY_TOKEN set.",
+            "people_search is unavailable: no Beeuni router (BEEUNI_API_URL / BEEUNI_TOKEN) and no APIFY_TOKEN set.",
         },
         null,
         2,

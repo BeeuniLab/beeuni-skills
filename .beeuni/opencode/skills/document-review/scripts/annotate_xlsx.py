@@ -19,7 +19,7 @@ from models import format_comment
 from openpyxl import load_workbook
 from openpyxl.comments import Comment
 
-AUTHOR = "Valkor"
+AUTHOR = "Beeuni"
 
 
 def load_issues():
