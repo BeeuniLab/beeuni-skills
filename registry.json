@@ -1,7 +1,7 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry.json",
-  "name": "valkor-ai/beeuni-skills",
-  "homepage": "https://github.com/valkor-ai/beeuni-skills",
+  "name": "BeeuniLab/beeuni-skills",
+  "homepage": "https://github.com/BeeuniLab/beeuni-skills",
   "items": [
     {
       "name": "account-research",
@@ -16,7 +16,7 @@
         }
       ],
       "meta": {
-        "source": "valkor-ai/beeuni-skills",
+        "source": "BeeuniLab/beeuni-skills",
         "primitive": "skill"
       }
     },
@@ -33,7 +33,7 @@
         }
       ],
       "meta": {
-        "source": "valkor-ai/beeuni-skills",
+        "source": "BeeuniLab/beeuni-skills",
         "primitive": "skill"
       }
     },
@@ -50,7 +50,7 @@
         }
       ],
       "meta": {
-        "source": "valkor-ai/beeuni-skills",
+        "source": "BeeuniLab/beeuni-skills",
         "primitive": "skill"
       }
     },
@@ -102,7 +102,7 @@
         }
       ],
       "meta": {
-        "source": "valkor-ai/beeuni-skills",
+        "source": "BeeuniLab/beeuni-skills",
         "primitive": "skill"
       }
     },
@@ -124,7 +124,7 @@
         }
       ],
       "meta": {
-        "source": "valkor-ai/beeuni-skills",
+        "source": "BeeuniLab/beeuni-skills",
         "primitive": "skill"
       }
     },
@@ -141,7 +141,7 @@
         }
       ],
       "meta": {
-        "source": "valkor-ai/beeuni-skills",
+        "source": "BeeuniLab/beeuni-skills",
         "primitive": "skill"
       }
     },
@@ -183,7 +183,7 @@
         }
       ],
       "meta": {
-        "source": "valkor-ai/beeuni-skills",
+        "source": "BeeuniLab/beeuni-skills",
         "primitive": "skill"
       }
     },
@@ -200,7 +200,7 @@
         }
       ],
       "meta": {
-        "source": "valkor-ai/beeuni-skills",
+        "source": "BeeuniLab/beeuni-skills",
         "primitive": "tool"
       }
     },
@@ -217,7 +217,7 @@
         }
       ],
       "meta": {
-        "source": "valkor-ai/beeuni-skills",
+        "source": "BeeuniLab/beeuni-skills",
         "primitive": "skill"
       }
     },
@@ -244,7 +244,7 @@
         }
       ],
       "meta": {
-        "source": "valkor-ai/beeuni-skills",
+        "source": "BeeuniLab/beeuni-skills",
         "primitive": "skill"
       }
     },
@@ -1451,7 +1451,7 @@
         }
       ],
       "meta": {
-        "source": "valkor-ai/beeuni-skills",
+        "source": "BeeuniLab/beeuni-skills",
         "primitive": "skill"
       }
     }
