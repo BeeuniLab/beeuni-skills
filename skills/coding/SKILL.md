@@ -13,7 +13,9 @@ Reach for this skill for repo-shaped requests: implement, fix, refactor, make te
 
 Beeuni gives you two delegation paths. Choosing the right one is the whole game.
 
-**The `explore` subagent — cheap, read-only recon.** When you need a fast answer about a codebase ("where is auth handled", "what calls this function", "does this repo use Vite or Webpack") and you do *not* need to change anything, invoke the read-only `explore` subagent via the `task` tool or an `@explore` mention. It searches and reports a conclusion instead of dumping files into your context. Use `scout` instead when the answer lives in an external dependency you'd need to pull source for.
+**The `explore` subagent — cheap, read-only recon.** When you need a fast answer about a codebase ("where is auth handled", "what calls this function", "does this repo use Vite or Webpack") and you do *not* need to change anything, invoke the read-only `explore` subagent via the `task` tool or an `@explore` mention. It searches and reports a conclusion instead of dumping files into your context. This works the same way when the answer lives in an external dependency — point `explore` at the vendored source or have it pull the package first.
+
+**Only the top-level agent can fan out.** If you are already running as a subagent, the `task` tool is not available to you one level down — the runtime rejects nested spawns with "Subagent depth limit reached". Do the recon yourself with `grep`/`glob`/`read` and report your conclusion. Background sessions are *not* subject to this: a Beeuni session is its own sandbox, so spawning one is always allowed.
 
 **A background session — the real worktree.** When the task is to *change* code — implement, fix, refactor, run a test suite, push a branch, open a PR — spawn a background session with the Beeuni sessions flow (`session_start_background`, or `session_spawn` for parallel work). Each session is its own isolated VM sandbox with full tooling, so it can install, build, run, and commit without touching your environment. Read results back with `session_read`. This is the equivalent of handing the job to a dedicated coding agent.
 
@@ -33,7 +35,7 @@ If a GitHub repo is clearly involved but you can't pin down the URL, resolve tha
 
 When the target is on GitHub and the user didn't paste a URL, find it with `gh` (don't reach for generic web-browsing tools — `gh` and `git` are the direct path):
 
-1. **Check project memory** — `view .beeuni/memory` for the repo, project, or related names.
+1. **Check project memory** — `view memory` (`.beeuni/memory` in projects created before 2026-09) for the repo, project, or related names.
 2. **List the user's orgs**, then search inside the likely one: `gh api user/orgs --jq '.[].login'`, then `gh search repos "<query>" --owner=<org> --limit=5`.
 3. **Ask** if neither lands it.
 
@@ -102,11 +104,11 @@ Be concrete — name files and functions, not "made some changes." The user shou
 **"Make the failing tests pass in our payments service."**
 In-project repo. Spawn one background session scoped to the project: *"Work in this project's workspace, no clone needed. The CI test suite is failing — find the broken tests, fix the cause, and get them green. Report which tests were failing and what the root cause was."* Read the result, summarize, surface the diff with `show`.
 
-**"Implement ENG-412 in github.com/acme/ledger."**
-External repo. Find/confirm the URL, gather the ticket details yourself, write them to a workspace file. Then: *"Clone https://github.com/acme/ledger into your workspace and work there. Implement ENG-412 — requirements are in /workspace/notes/ENG-412.md. Add tests and open a PR."* On completion, report the changes and include the PR link.
+**"Implement ENG-412 in github.com/beeuni/ledger."**
+External repo. Find/confirm the URL, gather the ticket details yourself, write them to a workspace file. Then: *"Clone https://github.com/beeuni/ledger into your workspace and work there. Implement ENG-412 — requirements are in /workspace/notes/ENG-412.md. Add tests and open a PR."* On completion, report the changes and include the PR link.
 
 **"Get two agents on this refactor and compare."**
 Spawn two sessions in one batch with the same objective but different models, each scoped to the repo. Read both back and present the two approaches side by side with a recommendation.
 
-**"Review PR #88 in acme/ledger and post comments."**
+**"Review PR #88 in beeuni/ledger and post comments."**
 Spawn two review sessions in one batch (different models), each loading `code-review` and checking out PR #88. Synthesize agreements, splits, and solo catches into a recommendation, then post a single `COMMENT` review via `gh api` with inline comments mapped to diff lines.

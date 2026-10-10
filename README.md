@@ -6,8 +6,8 @@ Public standalone Marketplace skills for Beeuni.
 
 The generated `registry.json` is the entry point consumed by Beeuni's
 Marketplace resolver. This repository intentionally contains the ten public
-standalone skills under `.beeuni/opencode/skills/`, plus the `people_search`
-tool used by `people-search`.
+standalone skills under `skills/`, plus the OpenCode `people_search`
+tool and its environment helper under `harnesses/opencode/tools/`.
 
 Installers should resolve this repository at a pinned commit or release tag.
 Marketplace items become project-owned files after installation.

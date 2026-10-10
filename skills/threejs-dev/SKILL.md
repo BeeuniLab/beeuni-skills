@@ -17,7 +17,7 @@ browser MCP (playwright/chrome-devtools), the project preview, or a user-supplie
 ## Skill location
 
 This skill is installed in the project at
-`.beeuni/opencode/skills/threejs-dev/`. Resolve `forge/`, `grimoire/`, `integrations/`, and
+`skills/threejs-dev/`. Resolve `forge/`, `grimoire/`, `integrations/`, and
 `scripts/` relative to the directory containing this `SKILL.md`; do not assume a global Claude or
 Codex checkout. Keep generated specs, renders, screenshots, and review reports in the user's
 project workspace rather than inside this skill directory.

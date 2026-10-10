@@ -4,7 +4,7 @@ import { getEnv, getBeeuniRouterBase } from "./lib/get-env";
 // People search is powered by an Apify LinkedIn-profile-search actor. Like
 // web_search, it runs in two modes: through the Beeuni router by default (Beeuni
 // injects the APIFY_TOKEN and bills the account — zero config for the user), or
-// against a raw APIFY_TOKEN when BEEUNI_API_URL is unset (self-host / opt-in).
+// against a raw APIFY_TOKEN when BEEUNI_API_URL is unset.
 //
 // The search is an Apify actor "run" (not an instant API). We use the
 // run-sync-get-dataset-items endpoint in "Short" mode (search pages only, no
