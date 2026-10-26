@@ -91,15 +91,21 @@ A connector qualifies if its job is people/company data. (CRMs like Salesforce/H
 
 **Filter — same discipline as the web path.** A curated index still returns loose matches. Phrase criteria as exclusions and judge each candidate against the fielded data returned; don't skip this step just because the connector felt more authoritative.
 
-**Wiring up a connector (when none exists).** Don't send the user to a dashboard — use the credentials flow (`beeuni-system` → *Credentials & setup links*):
-- Pipedream-backed app (most prospecting tools): `beeuni connectors add apollo --provider pipedream --app apollo --apply`, then `beeuni connectors connect apollo` to mint a 1-click link.
-- API-key provider (e.g. a People Data Labs key): `beeuni secrets request PDL_API_KEY --scope connector`.
+**Wiring up a connector (when none exists).** Search the current catalog rather than choosing a provider in advance:
+```sh
+beeuni connectors catalog apollo
+beeuni connectors catalog show <id>
+beeuni connectors catalog install <id>
+```
+Use the catalog's returned ID and the installed profile's returned slug. Follow the install result: for `connect`, run `beeuni connectors connect <slug>`; for `credential`, request the required key through `beeuni secrets request <identifier> --scope connector`, then bind it with `beeuni connectors secret <slug> <identifier>` after the user completes setup. If it is ready, no sign-in is needed. If already installed (exit 3), reuse that profile. If setup fails, inspect the reported error before calling it.
 
-Surface the URL, end your turn, and verify it landed (`beeuni connectors ls` / `beeuni secrets ls`) when the user returns.
+Share any setup URL with the user and wait for them to finish, then verify with `beeuni connectors ls`. For a direct API integration outside the connector catalog, request its key with `beeuni secrets request PDL_API_KEY --scope connector` and check `beeuni secrets ls` afterward; a stored secret alone does not install a connector.
+
+Before calling a profile, list `beeuni connectors accounts <slug>`. If several accounts are available, use the one the user named with `--account "<label>"`, or ask which account to use. Read the action's input schema with `beeuni connectors show <slug>.<action>` before calling it.
 
 **Output differences on the connector path:**
 - Source line names the connector, not "Web Search" — `**Found via:** Apollo`.
-- Verified-contact fields carry through — label an email that came from the connector `email_verified: true`. Anything not returned by the connector stays absent or `email_verified: false`. Never fabricate or pattern-guess, on either path.
+- Preserve the provider's verification status. Use `email_verified: true` only when the provider explicitly marks the email as verified; if no status is supplied, omit the verification flag. An address returned by a connector is not necessarily verified. Never fabricate or pattern-guess, on either path.
 - Respect compliance gating — if an action returns a permission/region error, surface it plainly rather than working around it.
 
 ## Gotchas
