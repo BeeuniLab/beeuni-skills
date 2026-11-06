@@ -68,7 +68,7 @@ web_search(
 - **Dedup before you fetch.** The same URL surfaces across query variants. Collapse on `url`, keep the richest snippet, *then* spend a scrape.
 - **Snippet-first.** Fetch only the URLs whose snippet didn't close the question.
 - **Disk is your memory.** Beyond a quick lookup, write scraped pages and extracted notes to a working dir and read them back selectively, rather than holding raw page text in context. This also makes long jobs resumable.
-- **Big pools → batch and delegate.** Reading dozens of pages: scrape in batches, write each to disk, process in chunks — or hand subtopics to parallel subagents — instead of one giant context. Only the top-level agent can hand off to subagents; if you are already a subagent, chunk through the pool yourself via disk.
+- **Big pools → batch and delegate.** Reading dozens of pages: scrape in batches, write each to disk, process in chunks — or hand independent subtopics to `agent` calls with `session: "separate"` and `run_in_background: true`. Their reports arrive as messages; do not wait or poll. Reuse the same child for follow-up work via `send_message` or `agent` with its `task_id`. Delegation follows the runtime's depth, concurrency and permission limits. If unavailable, process the pool in disk-backed batches; do not bypass the limit with another session-creation path.
 
 Full mechanics in [`reference/scaling.md`](reference/scaling.md). End-to-end recipes in [`reference/recipes.md`](reference/recipes.md).
 

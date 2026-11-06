@@ -13,11 +13,11 @@ Reach for this skill for repo-shaped requests: implement, fix, refactor, make te
 
 Beeuni gives you two delegation paths. Choosing the right one is the whole game.
 
-**The `explore` subagent — cheap, read-only recon.** When you need a fast answer about a codebase ("where is auth handled", "what calls this function", "does this repo use Vite or Webpack") and you do *not* need to change anything, invoke the read-only `explore` subagent via the `task` tool or an `@explore` mention. It searches and reports a conclusion instead of dumping files into your context. This works the same way when the answer lives in an external dependency — point `explore` at the vendored source or have it pull the package first.
+**Read-only recon.** When you need a fast answer about a codebase ("where is auth handled", "what calls this function", "does this repo use Vite or Webpack") and you do *not* need to change anything, call `agent` with `session: "same"`. Select an available read-only agent, or pass an inline `agent` with instructions and `tools: ["read", "grep", "glob"]`. It searches and reports a conclusion instead of dumping files into your context. Point it at source already available in this session; use a separate session when the investigation needs to clone or install dependencies.
 
-**Only the top-level agent can fan out.** If you are already running as a subagent, the `task` tool is not available to you one level down — the runtime rejects nested spawns with "Subagent depth limit reached". Do the recon yourself with `grep`/`glob`/`read` and report your conclusion. Background sessions are *not* subject to this: a Beeuni session is its own sandbox, so spawning one is always allowed.
+**Respect delegation limits.** Separate-session children can delegate within the runtime's depth, concurrency and permission limits. A `session: "same"` child cannot delegate again or ask the user a question. If delegation is unavailable or refused, do the recon yourself with `grep`/`glob`/`read` and report the limitation. Do not use another session-creation path to bypass a limit. A child never gains tools or access its caller lacks.
 
-**A background session — the real worktree.** When the task is to *change* code — implement, fix, refactor, run a test suite, push a branch, open a PR — spawn a background session with the Beeuni sessions flow (`session_start_background`, or `session_spawn` for parallel work). Each session is its own isolated VM sandbox with full tooling, so it can install, build, run, and commit without touching your environment. Read results back with `session_read`. This is the equivalent of handing the job to a dedicated coding agent.
+**A separate session — the real worktree.** When the task is to *change* code — implement, fix, refactor, run a test suite, push a branch, open a PR — call `agent` with `session: "separate"`, a short `description`, a `name` and the task `prompt`. For long or parallel work, set `run_in_background: true`: the call returns a `task_id`, and the child's final report arrives later as a message. Do not wait or poll for it. Each session has its own sandbox and branch, with the tools and access allowed to that agent. Continue the same task with `send_message` to its name or `task_id`, or another `agent` call with that `task_id`; start a new child only for independent work.
 
 **Keep the codebase out of your orchestrating context.** Don't drag a large or external repo into the session you're routing from — don't crawl its file tree, read its source, or fetch raw files from GitHub to "understand the architecture" first. That's what the delegate is for, and it explores far more efficiently than you can from the outside. Pass tickets, requirements, and constraints in the prompt; let the session discover the code. (Small, self-contained edits inside the current project are fine to do directly — the rule is about not importing an entire codebase into your head before delegating.)
 
@@ -25,7 +25,7 @@ Beeuni gives you two delegation paths. Choosing the right one is the whole game.
 
 Before you spawn anything, settle the workspace question and state it plainly in the session prompt. Don't make the delegate guess from phrases like "in the repo." Pick one:
 
-- **This project's repo.** The session sandbox is already an ephemeral branch of this project's `/workspace`. For substantial in-project work, spawn a session scoped to the project (pass `project=<name>`) so it gets its own clean branch. Open the prompt with: *"Work in this project's workspace. No clone needed."*
+- **This project's repo.** A separate child session works on its own branch of the current project's `/workspace`. Open the prompt with: *"Work in this project's workspace. No clone needed."*
 - **An external GitHub repo.** Spawn a session and have it clone the target itself with `gh repo clone <org>/<repo>` (or `git clone`). Open the prompt with: *"Clone https://github.com/org/repo into your workspace, then work there."* Make sure GitHub is connected first — if it isn't, mint a setup link to connect it before spawning (see the `beeuni-system` credentials reference) rather than handing the session a repo it can't reach.
 - **No repo at all.** For coding-adjacent work that needs no repository files, say *"No repository needed"* and consider whether a session is even warranted.
 
@@ -35,7 +35,7 @@ If a GitHub repo is clearly involved but you can't pin down the URL, resolve tha
 
 When the target is on GitHub and the user didn't paste a URL, find it with `gh` (don't reach for generic web-browsing tools — `gh` and `git` are the direct path):
 
-1. **Check project memory** — `view memory` (`.beeuni/memory` in projects created before 2026-09) for the repo, project, or related names.
+1. **Check available project memory** for the repo, project, or related names. Read `/drives/README.md` when Drive is mounted to locate shared files; otherwise inspect the project's existing memory files. Do not assume a memory path exists or create it merely to search.
 2. **List the user's orgs**, then search inside the likely one: `gh api user/orgs --jq '.[].login'`, then `gh search repos "<query>" --owner=<org> --limit=5`.
 3. **Ask** if neither lands it.
 
@@ -43,7 +43,7 @@ Resolve the URL yourself and put it in the session prompt — don't open the rep
 
 ## Running sessions in parallel
 
-When the user wants more than one agent on the work ("run two agents", "have a couple of approaches going at once"), spawn them together in a single turn — fire all the `session_spawn` calls in one batch rather than waiting for the first to finish. Each runs in its own sandbox, so they make progress simultaneously. Give every session a distinct objective so their results are worth comparing, then collect them with `session_read`.
+When the user wants more than one agent on the work ("run two agents", "have a couple of approaches going at once"), issue the `agent` calls together in a single message with `session: "separate"` and `run_in_background: true`. Each runs in its own sandbox, so they make progress simultaneously. Give every session a name and a distinct objective so their results are worth comparing. Keep working or end your turn; synthesize their reports when they arrive.
 
 ## Reviewing a pull request
 

@@ -134,7 +134,7 @@ An "issue" is a specific problem found in the document. Issues are the primary o
 
 ## Background Session Setup
 
-Document review is a long, meticulous process — always run it in a background session using the Beeuni sessions flow.
+For a substantial document review, delegate with `agent` in a separate background session. If you are already the child assigned this review, execute the workflow here instead of delegating the whole review again.
 
 Before spawning, determine which **issue types** are relevant from the user's request. When in doubt, default to all 5 types. Examples:
 - "review this", "audit this" → all 5 types
@@ -143,13 +143,19 @@ Before spawning, determine which **issue types** are relevant from the user's re
 - "check for confidential info" → `non_public_info`
 
 ```text
-session_start_background(
-  project="<project-name-if-applicable>",
-  prompt="Load the document-review skill and execute its workflow to review the attached document. Issue types: [list the relevant issue types]."
-)
+agent({
+  description: "Review the document",
+  name: "document-reviewer",
+  session: "separate",
+  run_in_background: true,
+  agent: { instructions: "Review documents using the document-review skill." },
+  prompt: "Load the document-review skill and execute its workflow in this session. Input document: <path accessible in the child session>. Issue types: [list the relevant issue types]. Return the review summary and the annotated document's path."
+})
 ```
 
-Use `session_read` to inspect progress and the final review output. After the background session completes, present the annotated document with `show`.
+Make the input document available to the child before starting the review. The call returns a `task_id`; the final report arrives later as a message, so do not wait or poll. Continue this review with `send_message` to the child's name or `task_id`, or `agent` with the same `task_id`. After the report arrives, retrieve the annotated document and present it with `show`.
+
+Delegation remains subject to the runtime's depth, concurrency and permission limits. Do not create a different session to bypass a refusal; if delegation is unavailable, perform the review in the current session and report any missing access.
 
 When responding to the user after the review completes, do not mention internal file paths or workspace locations. The annotated document should be delivered separately via the UI.
 
